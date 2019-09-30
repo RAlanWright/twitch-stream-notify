@@ -1,1 +1,1 @@
-# Twitch Streamer Notification App
+# Streamer Notification App (Using Twitch API)
