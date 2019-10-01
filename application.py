@@ -1,5 +1,6 @@
 import requests
 from twilio.rest import Client
+
 # Twilio SID & Auth Token
 client = Client("StringOfAlphanumeric",
                 "StringOfAlphanumeric")
@@ -31,7 +32,7 @@ at_least_one_stream_active = any(streams_active)
 last_messages_sent = client.messages.list(limit=1)
 if last_messages_sent:
     last_message_id = last_messages_sent[0].sid
-    last_message_data = client.messages(last_message_id).fetch()
+    last_message_data = Client.messages(last_message_id).fetch()
     last_message_content = last_message_data.body
     online_notified = "LIVE" in last_message_content
     offline_notified = not online_notified
